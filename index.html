@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link rel="icon" href="imagens/logoJogoVelha.png">
+		<link rel="stylesheet" href="css/estilos.css">
+
+		<title>Jogo da velha</title>
+	
+	</head>
+
+	<body>
+		<!--Barra de navegação - titulo -->
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<h1 style="color:aliceblue">
+					Jogo da Velha <img src="imagens/logoJogoVelha.png" alt="logo" width="60">
+				</h1>
+			</div>
+		</nav>
+		<br>
+		<!-- Bloco de código: tela inicial do jogo -->
+		<div class="container" id="telaInicial">
+			<div class="container-formatada">
+				<div class="row">
+					<div class="col-md-4 col-xs-12" style="padding: 10px;">
+						<center>
+							<img src="imagens/jogador_1.png" alt="gamer1" class="image-responsive">
+							<br><br>
+							<input type="text" name="nomeGamer1" id="nomeGamer1" class="form-control" placeholder="Digite um Apelido">
+						</center>
+					</div>
+
+					<div class="col-md-4 col-xs-12" style="padding: 10px;">
+						<center>
+							<img src="imagens/iniciar.png" id="btnPlay" alt="btnPlay" class="image-responsive btnPlay" data-toggle="tooltip" data-placement="bottom" title="Iniciar o Jogo">
+							<br><br>
+						</center>
+					</div>
+
+					<div class="col-md-4 col-xs-12" style="padding: 10px;">
+						<center>
+							<img src="imagens/jogador_2.png" alt="gamer2" class="image-responsive">
+							<br><br>
+							<input type="text" name="nomeGamer2" id="nomeGamer2" class="form-control" placeholder="Digite um Apelido">
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Tela Principal do JOGO -->
+		<div class="container" id="telaPlayJogo">
+			<div class="container-formatada">
+				<div class="row">
+					<div class="col-md-4" style="padding: 10px;">
+						<center>
+							<img src="imagens/jogador_1.png" alt="gamer1" class="image-responsive">
+							<br><br>
+							<span id="ExibirApelido-Gamer1"><span>
+						</center>
+					</div>
+
+					<div class="col-md-4" style="padding: 10px;">
+						<center>
+							<table width="350" id="tabelaDoJogo"> 
+								<tr>
+									<td id="a-1" style="border-right: 4px solid gray; border-bottom: 4px solid gray; width: 100px; height: 100px;" class="jogada"></td>
+									<td id="a-2" style="border-right: 4px solid gray; border-bottom: 4px solid gray; width: 100px; height: 100px;" class="jogada"></td>
+									<td id="a-3" style="border-bottom: 4px solid gray; width: 100px; height: 100px;" class="jogada"></td>
+								</tr>
+
+								<tr>
+									<td id="b-1" style="border-right: 4px solid gray; border-bottom: 4px solid gray; width: 100px; height: 100px;" class="jogada"></td>
+									<td id="b-2" style="border-right: 4px solid gray; border-bottom: 4px solid gray; width: 100px; height: 100px;" class="jogada"></td>
+									<td id="b-3" style="border-bottom: 4px solid gray; width: 100px; height: 100px;" class="jogada"></td>
+								</tr>
+
+								<tr>
+									<td id="c-1" style="border-right: 4px solid gray; width: 100px; height: 100px;" class="jogada"></td>
+									<td id="c-2" style="border-right: 4px solid gray; width: 100px; height: 100px;" class="jogada"></td>
+									<td id="c-3" style="width: 100px; height: 100px;" class="jogada"></td>
+								</tr>
+							</table>
+						</center>
+					</div>
+
+					<div class="col-md-4" style="padding: 10px;">
+						<center>
+							<img src="imagens/jogador_2.png" alt="gamer2" class="image-responsive">
+							<br><br>
+							<span id="ExibirApelido-Gamer2"><span>
+						</center>
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-md-12">
+						<center>
+							<img id="reiniciarGame" src="imagens/restart.png" alt="restart" class="image-responsive" width="100" data-toggle="tooltip" data-placement="bottom" title="Reiniciar o Jogo">
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true" onclick=" window.location.reload()">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" onclick=" window.location.reload()">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		 <center>
+			<h1 id="msgGanhou" style="font-family: 'Dokdo', cursive;"></h1>
+			<img src="imagens/winner.gif" alt="vencedor" class="img-fluid" id="imgMSG">
+		 </center>
+		</div>	
+	  </div>
+	</div>
+  </div>
+
+
+
+
+
+
+
+	<!-- Configuração para rodar os processos do Bootstrap juntamente com JS -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(function () {
+  		$('[data-toggle="tooltip"]').tooltip()})
+	</script>
+	<script src="js/jogoVelha.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+	</body>
+</html>

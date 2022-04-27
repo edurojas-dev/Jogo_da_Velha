@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Dokdo');
+			html,body{
+				margin: 0px;
+				padding: 0px;
+				background-image: url('../imagens/background.jpg');
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.navbar, .navbar-inverse{
+				border-radius: 0px;
+				font-family: 'Dokdo', cursive;
+				text-align: center;
+				background-color:gray;
+				border: none;
+			}
+			.form-control{
+				width: 200px;
+			}
+
+			.btnPlay{
+				cursor: pointer;
+			}
+
+			.container-formatada{
+				margin: 65px auto;
+				border: 1px solid gray;
+				background-color:whitesmoke;
+				border-radius: 30px;
+				padding: 10px;
+			}
+
+			#reiniciarGame{
+				cursor: pointer;
+			}
+
+			#telaPlayJogo{
+				display: none;
+				padding: 18px;
+			}
+
+			.apelidoFormatada{
+				font-size: 22px;
+				color: browN;
+				font-family: 'Dokdo', cursive;
+			}
+
+			.jogada{
+				cursor: pointer;
+			}
